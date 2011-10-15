@@ -1,0 +1,9 @@
+# AtriumED Assignment
+========================
+## Basic Functions:
+* Provides a simple way to create assignments and collect submissions within OpenAtrium Groups
+* Teacher creates an assignment, from which students can then add their assignment submissions
+
+## Current Submission Types
+* Drupal Revision-based Node Documents
+* File Submission using new Filedrop module: http://drupal.org/sandbox/techninja/1299644
