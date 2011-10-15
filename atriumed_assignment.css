@@ -6,10 +6,23 @@
   background:transparent url(images/assignment-icon.png) no-repeat;
 }
 
+/*Not Working? */
 #feature-atriumed_assignment {
   background:url(images/homework-icon.png) no-repeat; height:20px; width:20px; 
 }
 
-.span.spaces-feature.feature-atriumed_assignment {
+span.spaces-feature.feature-atriumed_assignment {
   background:url(images/assignment-icon.png) no-repeat; height:20px; width:20px; 
+}
+
+.submission_field_assign_ref {
+	font-size: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+#assignment-header {
+	font-size: 18px;
+	font-weight: normal;
+	text-shadow: white 0px 1px 0px;
 }

@@ -21,7 +21,7 @@ function atriumed_assignment_node_info() {
     'assignment' => array(
       'name' => t('Assignment'),
       'module' => 'features',
-      'description' => '',
+      'description' => t('An Assignment feature allowing either file or node document submissions. '),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',

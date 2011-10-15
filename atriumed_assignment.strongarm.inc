@@ -220,6 +220,20 @@ function atriumed_assignment_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'filedrop_use_assignment';
+  $strongarm->value = 1;
+  $export['filedrop_use_assignment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'itweak_upload_node_display_assignment';
+  $strongarm->value = '0';
+  $export['itweak_upload_node_display_assignment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_assignment';
   $strongarm->value = array(
     0 => 'status',
@@ -269,7 +283,7 @@ function atriumed_assignment_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'upload_assignment';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['upload_assignment'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -278,6 +292,20 @@ function atriumed_assignment_strongarm() {
   $strongarm->name = 'upload_submission';
   $strongarm->value = '1';
   $export['upload_submission'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xref_links_assignment';
+  $strongarm->value = 'template';
+  $export['xref_links_assignment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xref_view_assignment';
+  $strongarm->value = 1;
+  $export['xref_view_assignment'] = $strongarm;
 
   return $export;
 }

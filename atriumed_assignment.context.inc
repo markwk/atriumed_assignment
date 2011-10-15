@@ -21,6 +21,11 @@ function atriumed_assignment_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        '*/submissions' => '*/submissions',
+      ),
+    ),
     'views' => array(
       'values' => array(
         'assignments:page_1' => 'assignments:page_1',
@@ -35,6 +40,12 @@ function atriumed_assignment_context_default_contexts() {
           'delta' => 'assignments-block_1',
           'region' => 'right',
           'weight' => 0,
+        ),
+        'views-assignments-block_2' => array(
+          'module' => 'views',
+          'delta' => 'assignments-block_2',
+          'region' => 'right',
+          'weight' => 1,
         ),
       ),
     ),
