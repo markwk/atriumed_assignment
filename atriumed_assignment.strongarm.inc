@@ -9,6 +9,27 @@ function atriumed_assignment_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_submission';
+  $strongarm->value = '[author-name]\'s Submission for [field_assign_ref-title] ';
+  $export['ant_pattern_submission'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'atrium_activity_update_type_assignment';
+  $strongarm->value = 1;
+  $export['atrium_activity_update_type_assignment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'atrium_activity_update_type_submission';
+  $strongarm->value = 0;
+  $export['atrium_activity_update_type_submission'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_assignment';
   $strongarm->value = 0;
   $export['comment_anonymous_assignment'] = $strongarm;
@@ -129,7 +150,7 @@ function atriumed_assignment_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_submission';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_submission'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -220,20 +241,6 @@ function atriumed_assignment_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'filedrop_use_assignment';
-  $strongarm->value = 1;
-  $export['filedrop_use_assignment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'itweak_upload_node_display_assignment';
-  $strongarm->value = '0';
-  $export['itweak_upload_node_display_assignment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_assignment';
   $strongarm->value = array(
     0 => 'status',
@@ -248,8 +255,31 @@ function atriumed_assignment_strongarm() {
   $strongarm->value = array(
     0 => 'status',
     1 => 'promote',
+    2 => 'revision',
   );
   $export['node_options_submission'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'notifications_content_type_assignment';
+  $strongarm->value = array(
+    0 => 'thread',
+    1 => 'nodetype',
+    2 => 'author',
+  );
+  $export['notifications_content_type_assignment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'notifications_content_type_submission';
+  $strongarm->value = array(
+    0 => 'thread',
+    1 => 'nodetype',
+    2 => 'author',
+  );
+  $export['notifications_content_type_submission'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -283,28 +313,28 @@ function atriumed_assignment_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'upload_assignment';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['upload_assignment'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'upload_submission';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['upload_submission'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xref_links_assignment';
-  $strongarm->value = 'template';
+  $strongarm->value = '0';
   $export['xref_links_assignment'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xref_view_assignment';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['xref_view_assignment'] = $strongarm;
 
   return $export;

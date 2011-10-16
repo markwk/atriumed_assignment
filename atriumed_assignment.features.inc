@@ -21,7 +21,7 @@ function atriumed_assignment_node_info() {
     'assignment' => array(
       'name' => t('Assignment'),
       'module' => 'features',
-      'description' => t('An Assignment feature allowing either file or node document submissions. '),
+      'description' => t('Assignments provides a way for teachers to assignment homework and collect submissions. '),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',
@@ -32,7 +32,7 @@ function atriumed_assignment_node_info() {
     'submission' => array(
       'name' => t('Submission'),
       'module' => 'features',
-      'description' => '',
+      'description' => t('Submissions are added by students to assignments. '),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',

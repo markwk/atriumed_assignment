@@ -6,32 +6,6 @@
 function atriumed_assignment_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer filedrop
-  $permissions['administer filedrop'] = array(
-    'name' => 'administer filedrop',
-    'roles' => array(
-      '0' => 'administrator',
-    ),
-  );
-
-  // Exported permission: attach file to filedrop
-  $permissions['attach file to filedrop'] = array(
-    'name' => 'attach file to filedrop',
-    'roles' => array(
-      '0' => 'authenticated user',
-    ),
-  );
-
-  // Exported permission: attach filedrop to node
-  $permissions['attach filedrop to node'] = array(
-    'name' => 'attach filedrop to node',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'manager',
-      '2' => 'teacher',
-    ),
-  );
-
   // Exported permission: create assignment content
   $permissions['create assignment content'] = array(
     'name' => 'create assignment content',
@@ -130,32 +104,6 @@ function atriumed_assignment_user_default_permissions() {
     ),
   );
 
-  // Exported permission: remove any file from filedrop
-  $permissions['remove any file from filedrop'] = array(
-    'name' => 'remove any file from filedrop',
-    'roles' => array(
-      '0' => 'administrator',
-    ),
-  );
-
-  // Exported permission: remove own file from filedrop
-  $permissions['remove own file from filedrop'] = array(
-    'name' => 'remove own file from filedrop',
-    'roles' => array(
-      '0' => 'authenticated user',
-    ),
-  );
-
-  // Exported permission: view all filedrop files
-  $permissions['view all filedrop files'] = array(
-    'name' => 'view all filedrop files',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'manager',
-      '2' => 'teacher',
-    ),
-  );
-
   // Exported permission: view field_assign_ref
   $permissions['view field_assign_ref'] = array(
     'name' => 'view field_assign_ref',
@@ -171,14 +119,6 @@ function atriumed_assignment_user_default_permissions() {
     'roles' => array(
       '0' => 'anonymous user',
       '1' => 'authenticated user',
-    ),
-  );
-
-  // Exported permission: view own filedrop files
-  $permissions['view own filedrop files'] = array(
-    'name' => 'view own filedrop files',
-    'roles' => array(
-      '0' => 'authenticated user',
     ),
   );
 

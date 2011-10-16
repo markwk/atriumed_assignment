@@ -8,3 +8,71 @@ include_once('atriumed_assignment.features.inc');
 function atriumed_assignment_init() {
   drupal_add_css(drupal_get_path('module', 'atriumed_assignment') .'/atriumed_assignment.css');
 }
+/**
+* Implementation of hook_menu()
+*/
+function atriumed_assignment_menu() {
+  $items = array();
+  $items['node/%/addsubmission'] = array(
+    'title' => t('Add Submission'),
+    'description' => t('Add Submission page'),
+    'page callback' => 'atriumed_assignment_add_submission',
+    'page arguments' => array(1),
+    'access callback' => 'atriumed_assignment_add_submission_access',
+    'access arguments' => array(1),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 5,
+    'file' => 'atriumed_assignment.module',
+  );
+  return $items;
+}
+/** 
+* Redirect to node submission
+* 
+* @param mixed $node
+*/
+function atriumed_assignment_add_submission($nid) {
+  drupal_goto("node/add/submission/". $nid);
+}
+/**
+* Submission access to authenticated users
+* 
+* @param mixed $nid
+*/
+function atriumed_assignment_add_submission_access($nid) {
+  global $user;
+  $node = node_load($nid);
+  if ($node->type == 'assignment' && !empty($node) && in_array('authenticated user', $user->roles)) {
+    return TRUE;  
+  }
+  else {
+    return FALSE;
+  }
+}
+/**
+* All submission access to teacher and administrator
+* 
+* @param mixed $nid
+*/
+function atriumed_assignment_allsubmission_access($nid) {
+  global $user;
+  $node = node_load($nid);
+  if ($node->type == 'assignment' && !empty($node) && (in_array('teacher', $user->roles) || in_array('administrator', $user->roles))) {
+    return TRUE;  
+  }
+  else {
+    return FALSE;
+  }
+}
+/**
+* Implementation of hook_menu_alter()
+* 
+* Changes views access on the basis of users
+* @param mixed $items
+*/
+function atriumed_assignment_menu_alter(&$items) {
+  $items['node/%/submissions']['access callback'] = 'atriumed_assignment_allsubmission_access';
+  $items['node/%/submissions']['access arguments'] = array(1);
+  $items['node/%/mysubmission']['access callback'] = 'atriumed_assignment_add_submission_access';
+  $items['node/%/mysubmission']['access arguments'] = array(1);
+}
