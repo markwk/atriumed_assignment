@@ -2,8 +2,11 @@
 ========================
 ## Basic Functions:
 * Provides a simple way to create assignments and collect submissions within OpenAtrium Groups
-* Teacher creates an assignment, from which students can then add their assignment submissions
+* Submissions are added a Drupal nodes and have access to Drupal's revision system and inline diff functionality
 
-## Current Submission Types
-* Drupal Revision-based Node Documents
-* File Submission using new Filedrop module: http://drupal.org/sandbox/techninja/1299644
+## Alternative:
+* This feature uses node document submissions for assignments as opposed to the AtriumED feature (https://github.com/markwk/atriumed_homework), which uses Drupal's filedrop module to post submissions in the form of documents like doc or pdf. 
+
+## Note:
+* Ideally the assignment and homework features should be combined to offer two alternative assignment submission styles (and perhaps enhanced with others like image galleries). 
+* For now, I went with the easiest solution to test these two approaches. 
